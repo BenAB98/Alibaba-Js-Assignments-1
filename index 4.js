@@ -37,9 +37,14 @@ const users = [
 
 function showAllUsers() {
     // return users;
-    for (const iterator of users) {
-        console.log(iterator);
-    }
+
+    // for (const iterator of users) {
+    //     console.log(iterator);
+    // }
+
+    users.forEach(element => {
+        console.log(element);
+    });
 }
 // console.log(showAllUsers());
 // showAllUsers();
@@ -49,6 +54,7 @@ function getUserById(id) {
     //     if (users[i].id===id) return users[i];
     // }
     // return "user not found";
+    
     const selectedUser = users.find((user) => user.id === id);
     if (selectedUser === undefined) return "user not found";
     else return selectedUser;
